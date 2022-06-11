@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace TimeSheet
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for TimeWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TimeWindow : Window
     {
-        public MainWindow()
+        public TimeWindow()
         {
             InitializeComponent();
         }
@@ -28,13 +27,6 @@ namespace TimeSheet
         private void btnEmployee_Click(object sender, RoutedEventArgs e)
         {
             EmployeeWindow w = new EmployeeWindow();
-            w.Show();
-            this.Close();
-        }
-
-        private void btnTime_Click(object sender, RoutedEventArgs e)
-        {
-            TimeWindow w = new TimeWindow();
             w.Show();
             this.Close();
         }

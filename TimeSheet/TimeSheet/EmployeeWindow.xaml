@@ -5,36 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TimeSheet"
         mc:Ignorable="d"
-        Title="EmployeeWindow" Height="450" Width="600">
+        Title="EmployeeWindow" Height="460" Width="690">
     <Grid>
         <DockPanel Height="30" Margin="0,0,0,0" VerticalAlignment="Top">
-            <Button x:Name="btnTime" Content="Timesheet" Width="150"/>
-            <Button x:Name="btnClient" Content="Client" Width="150"/>
-            <Button x:Name="btnProject" Content="Project" Width="150"/>
-            <Button x:Name="btnEmployee" Content="Employee" Width="150" Click="btnEmployee_Click"/>
+            <Button x:Name="btnTime" Content="Timesheet" Width="174" Click="btnTime_Click"/>
+            <Button x:Name="btnClient" Content="Client" Width="173" Click="btnClient_Click"/>
+            <Button x:Name="btnProject" Content="Project" Width="175" Click="btnProject_Click"/>
+            <Button x:Name="btnEmployee" Content="Employee" Width="170"/>
         </DockPanel>
-        <Label Content="Name" HorizontalAlignment="Left" Margin="220,35,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" Margin="220,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        
-        <Label Content="Email" HorizontalAlignment="Left" Margin="220,85,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="220,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Grid Margin="0,35,152,0">
+            <DataGrid x:Name="listEmployee" HorizontalAlignment="Left" Height="369" Margin="10,10,0,0" VerticalAlignment="Top" Width="511" AutoGenerateColumns="False" CanUserAddRows="False" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="25" Header="ID" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Width="60" Header="NAME" Binding="{Binding Name}"/>
+                    <DataGridTextColumn Width="100" Header="ADDRESS" Binding="{Binding Address}"/>
+                    <DataGridTextColumn Width="66" Header="PHONE" Binding="{Binding Phone}"/>
+                    <DataGridCheckBoxColumn Width="50" Header="ACTIVE" Binding="{Binding IsActive}"/>
+                    <DataGridTextColumn Width="*" Header="EMAIL" Binding="{Binding Email}"/>
+                    <DataGridTemplateColumn Width="60">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="RemoveEmplyee" Content="REMOVE" Click="RemoveEmplyee_Click"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <Grid Margin="529,0,0,0" x:Name="AddOption" Visibility="Visible">
+            <Label Content="Name" HorizontalAlignment="Left" Margin="0,34,0,0" VerticalAlignment="Top" Width="45"/>
+            <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" Margin="0,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130"/>
 
-        <Label Content="Address" HorizontalAlignment="Left" Margin="220,135,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Height="23" Margin="220,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Email" HorizontalAlignment="Left" Margin="0,84,0,0" VerticalAlignment="Top" Width="40"/>
+            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="0,109,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130"/>
 
-        <Label Content="Phone" HorizontalAlignment="Left" Margin="220,185,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtPhone" HorizontalAlignment="Left" Height="23" Margin="220,210,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Address" HorizontalAlignment="Left" Margin="0,134,0,0" VerticalAlignment="Top" Width="57"/>
+            <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Height="23" Margin="0,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130"/>
 
-        <Label Content="Role" HorizontalAlignment="Left" Margin="220,235,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtRole" HorizontalAlignment="Left" Height="23" Margin="220,260,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Phone" HorizontalAlignment="Left" Margin="0,184,0,0" VerticalAlignment="Top" Width="47"/>
+            <TextBox x:Name="txtPhone" HorizontalAlignment="Left" Height="23" Margin="0,209,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130"/>
 
-        <Label Content="Password" HorizontalAlignment="Left" Margin="220,285,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="23" Margin="220,315,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Role" HorizontalAlignment="Left" Margin="0,234,0,0" VerticalAlignment="Top" Width="35"/>
+            <TextBox x:Name="txtRole" HorizontalAlignment="Left" Height="23" Margin="0,259,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130"/>
 
-        <Label Content="Money per hours" HorizontalAlignment="Left" Margin="220,335,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtMoney" HorizontalAlignment="Left" Height="23" Margin="220,360,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Password" HorizontalAlignment="Left" Margin="0,284,0,0" VerticalAlignment="Top" Width="65"/>
+            <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="23" Margin="0,314,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130"/>
 
-        <Button Margin="220,390,0,0" HorizontalAlignment="Left" Width="120" Height="20" VerticalAlignment="Top" Content="SAVE" Click="Button_Click"></Button>
+            <Label Content="Money per hours" HorizontalAlignment="Left" Margin="0,334,0,0" VerticalAlignment="Top" Width="109"/>
+            <TextBox x:Name="txtMoney" HorizontalAlignment="Left" Height="23" Margin="0,359,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130"/>
 
+            <Button Margin="0,389,0,0" HorizontalAlignment="Left" Width="130" Height="20" VerticalAlignment="Top" Content="SAVE" Click="Button_Click"></Button>
+        </Grid>
     </Grid>
 </Window>

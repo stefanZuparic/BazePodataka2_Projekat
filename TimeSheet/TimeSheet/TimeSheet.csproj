@@ -176,13 +176,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ClienWindow.xaml.cs">
+      <DependentUpon>ClienWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeWindow.xaml.cs">
       <DependentUpon>EmployeeWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IEmployeeService.cs" />
     <Compile Include="Maper\MappingProfile.cs" />
+    <Compile Include="ProjectWindow.xaml.cs">
+      <DependentUpon>ProjectWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Repository\DTOs\BranchOfficeDTO.cs" />
     <Compile Include="Repository\DTOs\ClientDTO.cs" />
+    <Compile Include="Repository\DTOs\EmployeeDataGreadDTO.cs" />
     <Compile Include="Repository\DTOs\EmployeeDTO.cs" />
     <Compile Include="Repository\DTOs\EmployeeTechnologyDTO.cs" />
     <Compile Include="Repository\DTOs\LeadershipDTO.cs" />
@@ -201,6 +208,13 @@
     <Compile Include="Repository\Models\TimeSheetEntry.cs" />
     <Compile Include="Repository\TimeSheetEntryDbContext.cs" />
     <Compile Include="Service\EmployeeService.cs" />
+    <Compile Include="TimeWindow.xaml.cs">
+      <DependentUpon>TimeWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ClienWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EmployeeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -217,6 +231,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ProjectWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TimeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

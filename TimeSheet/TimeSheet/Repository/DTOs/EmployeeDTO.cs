@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TimeSheet.Repository.Models;
 
 namespace TimeSheet.Repository.DTOs
 {
@@ -18,5 +19,8 @@ namespace TimeSheet.Repository.DTOs
         public double HoursPerWeek { get; set; }
         public double MoneyPerHouse { get; set; }
         public int IsActive { get; set; }
+        public virtual ICollection<EmployeeTechnology> EmployeeTechnology { get; set; }
+        public virtual ICollection<Leadership> Leadership { get; set; }
+        public virtual ICollection<TimeSheetEntry> TimeSheetEntry { get; set; }
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TimeSheet.Interfaces;
+using TimeSheet.Maper;
 using TimeSheet.Repository;
 using TimeSheet.Repository.DTOs;
 using TimeSheet.Repository.Models;
@@ -12,11 +13,11 @@ using TimeSheet.Repository.Models;
 namespace TimeSheet.Service
 {
     public class EmployeeService : IEmployeeService
-    {
+    { 
         private IMapper _mapper;
         private TimeSheetEntryDbContext _context;
 
-        public EmployeeService( IMapper mapper, TimeSheetEntryDbContext context) 
+        public EmployeeService(IMapper mapper , TimeSheetEntryDbContext context) 
         {
             _mapper = mapper;
             _context = context;
@@ -52,6 +53,15 @@ namespace TimeSheet.Service
             Employee employee = _context.Employee.FirstOrDefault(e => e.Email == mail);
 
             return _mapper.Map<EmployeeDTO>(employee);
+        }
+
+        public void UpdateActivity(bool state, string mail)
+        {
+            Employee employee = _context.Employee.FirstOrDefault(e => e.Email == mail);
+
+            employee.IsActive = state == true ? 1 : 0;
+
+            _context.SaveChanges();
         }
     }
 }

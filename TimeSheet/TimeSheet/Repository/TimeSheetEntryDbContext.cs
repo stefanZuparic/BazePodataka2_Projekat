@@ -43,17 +43,13 @@ namespace TimeSheet.Repository
         {
             modelBuilder.Entity<BranchOffice>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.Property(e => e.Address).IsUnicode(false);
 
-                entity.Property(e => e.Address).IsFixedLength();
-
-                entity.Property(e => e.Name).IsFixedLength();
+                entity.Property(e => e.Name).IsUnicode(false);
             });
 
             modelBuilder.Entity<Client>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Address).IsUnicode(false);
 
                 entity.Property(e => e.IsActive).IsUnicode(false);
@@ -63,8 +59,6 @@ namespace TimeSheet.Repository
 
             modelBuilder.Entity<Employee>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Address).IsUnicode(false);
 
                 entity.Property(e => e.Email).IsUnicode(false);
@@ -78,8 +72,6 @@ namespace TimeSheet.Repository
 
             modelBuilder.Entity<EmployeeTechnology>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.LevelOfExperience).IsUnicode(false);
 
                 entity.HasOne(d => d.Employee)
@@ -95,8 +87,6 @@ namespace TimeSheet.Repository
 
             modelBuilder.Entity<Leadership>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.HasOne(d => d.Employee)
                     .WithMany(p => p.Leadership)
                     .HasForeignKey(d => d.EmployeeId)
@@ -110,8 +100,6 @@ namespace TimeSheet.Repository
 
             modelBuilder.Entity<Project>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Description).IsUnicode(false);
 
                 entity.Property(e => e.IsActive).IsUnicode(false);
@@ -126,15 +114,11 @@ namespace TimeSheet.Repository
 
             modelBuilder.Entity<PublichHoliday>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Name).IsUnicode(false);
             });
 
             modelBuilder.Entity<Technology>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Description).IsUnicode(false);
 
                 entity.Property(e => e.Name).IsUnicode(false);
@@ -142,8 +126,6 @@ namespace TimeSheet.Repository
 
             modelBuilder.Entity<TimeSheetEntry>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Description).IsUnicode(false);
 
                 entity.Property(e => e.OwertimeType).IsUnicode(false);

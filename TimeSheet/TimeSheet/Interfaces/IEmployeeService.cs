@@ -15,6 +15,8 @@ namespace TimeSheet.Interfaces
 
         void DeleteByMale(string mail);
 
+        void UpdateActivity(bool state, string mail);
+
         List<EmployeeDTO> GetAll();
     }
 }
