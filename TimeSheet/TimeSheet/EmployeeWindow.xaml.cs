@@ -30,9 +30,12 @@ namespace TimeSheet
         IMapper mapper;
 
         EmployeeService service;
+        TechnologyService technologyService;
 
         List<EmployeeDTO> employees;
         List<EmployeeDataGreadDTO> employeesView;
+
+        List<Technology> technologys;
         public EmployeeWindow()
         {
             var mapperconfig = new MapperConfiguration(mc => mc.AddProfile(new MappingProfile()));
@@ -41,14 +44,19 @@ namespace TimeSheet
             context = new TimeSheetEntryDbContext();
 
             service = new EmployeeService(mapper, context);
+            technologyService = new TechnologyService(mapper, context);
 
             employees = new List<EmployeeDTO>();
             employees = service.GetAll();
+            technologys = new List<Technology>();
 
+
+            
             InitializeComponent();
             
             employeesView = MapEmployeeDTOonEmployeeDataGreadDTO(employees);
             this.listEmployee.ItemsSource = employeesView;
+            cmbTech.ItemsSource = technologyService.GetAll();
         }
 
         private List<EmployeeDataGreadDTO> MapEmployeeDTOonEmployeeDataGreadDTO(List<EmployeeDTO> employees)
@@ -61,7 +69,8 @@ namespace TimeSheet
                     Address = e.Address,
                     Phone = e.Phone,
                     Email = e.Email,
-                    IsActive = e.IsActive == 1 ? true : false
+                    IsActive = e.IsActive == 1 ? true : false,
+                    
                 };
                 ret.Add(e1);
             }
@@ -84,12 +93,21 @@ namespace TimeSheet
                         Role = txtRole.Text,
                         Password = txtPassword.Text,
                         IsActive = 1,
-                        HoursPerWeek = 0,
-                        EmployeeTechnology = new List<EmployeeTechnology>(),
-                        Leadership = new List<Leadership>(),
-                        TimeSheetEntry = new List<TimeSheetEntry>()
+                        HoursPerWeek = 0
                     };
-                    service.Create(employeeDTO);
+                    Employee employee = service.Create(employeeDTO);
+
+                    foreach (Technology t in technologys)
+                    {
+                        EmployeeTechnologyDTO technologyDTO = new EmployeeTechnologyDTO()
+                        {
+                            EmployeeId = employee.Id,
+                            TechnologyId = t.Id,
+                            LevelOfExperience = cmbLvl.Text,
+                        };
+                        technologyService.Create(technologyDTO);
+                    }
+                    
                 }
             }
         }
@@ -121,6 +139,20 @@ namespace TimeSheet
             ProjectWindow w = new ProjectWindow();
             w.Show();
             this.Close();
+        }
+
+        private void chk_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox box = (CheckBox)sender;
+            Technology tech = (Technology)box.DataContext;
+            technologys.Add(tech);
+        }
+
+        private void chk_Unchecked(object sender, RoutedEventArgs e)
+        {
+            CheckBox box = (CheckBox)sender;
+            Technology tech = (Technology)box.DataContext;
+            technologys.Remove(tech);
         }
     }
 }

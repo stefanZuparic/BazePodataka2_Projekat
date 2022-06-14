@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TimeSheet.Repository.DTOs;
+using TimeSheet.Repository.Models;
 
 namespace TimeSheet.Interfaces
 {
@@ -11,7 +12,7 @@ namespace TimeSheet.Interfaces
     {
         EmployeeDTO GetByMail(string mail);
 
-        void Create(EmployeeDTO employeeDTO);
+        Employee Create(EmployeeDTO employeeDTO);
 
         void DeleteByMale(string mail);
 

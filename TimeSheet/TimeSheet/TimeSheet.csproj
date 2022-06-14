@@ -182,18 +182,23 @@
     <Compile Include="EmployeeWindow.xaml.cs">
       <DependentUpon>EmployeeWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IClientService.cs" />
     <Compile Include="Interfaces\IEmployeeService.cs" />
+    <Compile Include="Interfaces\IProjectService.cs" />
+    <Compile Include="Interfaces\ITimeSheet.cs" />
     <Compile Include="Maper\MappingProfile.cs" />
     <Compile Include="ProjectWindow.xaml.cs">
       <DependentUpon>ProjectWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Repository\DTOs\BranchOfficeDTO.cs" />
+    <Compile Include="Repository\DTOs\ClientDataGreadDTO.cs" />
     <Compile Include="Repository\DTOs\ClientDTO.cs" />
     <Compile Include="Repository\DTOs\EmployeeDataGreadDTO.cs" />
     <Compile Include="Repository\DTOs\EmployeeDTO.cs" />
     <Compile Include="Repository\DTOs\EmployeeTechnologyDTO.cs" />
     <Compile Include="Repository\DTOs\LeadershipDTO.cs" />
     <Compile Include="Repository\DTOs\ProjectDTO.cs" />
+    <Compile Include="Repository\DTOs\ProjectGreadDTO.cs" />
     <Compile Include="Repository\DTOs\PublicHolidayDTO.cs" />
     <Compile Include="Repository\DTOs\TechnologyDTO.cs" />
     <Compile Include="Repository\DTOs\TimeSheetEntryDTO.cs" />
@@ -207,9 +212,16 @@
     <Compile Include="Repository\Models\Technology.cs" />
     <Compile Include="Repository\Models\TimeSheetEntry.cs" />
     <Compile Include="Repository\TimeSheetEntryDbContext.cs" />
+    <Compile Include="Service\ClientService.cs" />
     <Compile Include="Service\EmployeeService.cs" />
+    <Compile Include="Service\ProjectService.cs" />
+    <Compile Include="Service\TechnologyService.cs" />
+    <Compile Include="Service\TimeSheetEntryService.cs" />
     <Compile Include="TimeWindow.xaml.cs">
       <DependentUpon>TimeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Upis.xaml.cs">
+      <DependentUpon>Upis.xaml</DependentUpon>
     </Compile>
     <Page Include="ClienWindow.xaml">
       <SubType>Designer</SubType>
@@ -236,6 +248,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TimeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Upis.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

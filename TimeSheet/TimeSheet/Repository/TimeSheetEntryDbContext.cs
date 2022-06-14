@@ -77,6 +77,7 @@ namespace TimeSheet.Repository
                 entity.HasOne(d => d.Employee)
                     .WithMany(p => p.EmployeeTechnology)
                     .HasForeignKey(d => d.EmployeeId)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_EmployeeTechnology_Employee");
 
                 entity.HasOne(d => d.Technology)
@@ -90,11 +91,13 @@ namespace TimeSheet.Repository
                 entity.HasOne(d => d.Employee)
                     .WithMany(p => p.Leadership)
                     .HasForeignKey(d => d.EmployeeId)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_Leadership_Employee");
 
                 entity.HasOne(d => d.Project)
                     .WithMany(p => p.Leadership)
                     .HasForeignKey(d => d.ProjectId)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_Leadership_Project");
             });
 
@@ -109,6 +112,7 @@ namespace TimeSheet.Repository
                 entity.HasOne(d => d.Clinet)
                     .WithMany(p => p.Project)
                     .HasForeignKey(d => d.ClinetId)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_Project_Client");
             });
 
@@ -133,17 +137,18 @@ namespace TimeSheet.Repository
                 entity.HasOne(d => d.BranchOffice)
                     .WithMany(p => p.TimeSheetEntry)
                     .HasForeignKey(d => d.BranchOfficeId)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_TimeSheetEntry_BranchOffice");
 
                 entity.HasOne(d => d.Employee)
                     .WithMany(p => p.TimeSheetEntry)
                     .HasForeignKey(d => d.EmployeeId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_TimeSheetEntry_Employee");
 
                 entity.HasOne(d => d.Project)
                     .WithMany(p => p.TimeSheetEntry)
                     .HasForeignKey(d => d.ProjectId)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_TimeSheetEntry_Project");
             });
 

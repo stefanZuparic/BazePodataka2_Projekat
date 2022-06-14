@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,12 +24,13 @@ namespace TimeSheet.Service
             _context = context;
         }
 
-        public void Create(EmployeeDTO employeeDTO)
+        public Employee Create(EmployeeDTO employeeDTO)
         {
             Employee employee = _mapper.Map<Employee>(employeeDTO);
 
             _context.Employee.Add(employee);
             _context.SaveChanges();
+            return employee;
         }
 
         public void DeleteByMale(string mail)
@@ -43,9 +45,24 @@ namespace TimeSheet.Service
 
         public List<EmployeeDTO> GetAll()
         {
-            List<Employee> employee = _context.Employee.ToList();
+            List<Employee> employee = _context.Employee.Include("Leadership").Include("TimeSheetEntry").Include( p => p.EmployeeTechnology).ThenInclude(EmployeeTechnology => EmployeeTechnology.Technology).AsNoTracking().ToList();
 
             return _mapper.Map<List<EmployeeDTO>>(employee);
+        }
+
+        public List<Employee> GetAllEmployee()
+        {
+            List<Employee> employee = _context.Employee.Include("Leadership").Include("TimeSheetEntry").Include(p => p.EmployeeTechnology).ThenInclude(EmployeeTechnology => EmployeeTechnology.Technology)
+                .AsNoTracking().ToList();
+
+            return employee;
+        }
+
+        public EmployeeDTO GetById(int id)
+        {
+            Employee employee = _context.Employee.Find(id);
+
+            return _mapper.Map<EmployeeDTO>(employee);
         }
 
         public EmployeeDTO GetByMail(string mail)
@@ -53,6 +70,13 @@ namespace TimeSheet.Service
             Employee employee = _context.Employee.FirstOrDefault(e => e.Email == mail);
 
             return _mapper.Map<EmployeeDTO>(employee);
+        }
+
+        public Employee GetByMailEmployee(string mail)
+        {
+            Employee employee = _context.Employee.FirstOrDefault(e => e.Email == mail);
+
+            return employee;
         }
 
         public void UpdateActivity(bool state, string mail)

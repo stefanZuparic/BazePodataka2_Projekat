@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TimeSheet"
         mc:Ignorable="d"
-        Title="EmployeeWindow" Height="460" Width="690">
+        Title="EmployeeWindow" Height="510" Width="690">
     <Grid>
         <DockPanel Height="30" Margin="0,0,0,0" VerticalAlignment="Top">
             <Button x:Name="btnTime" Content="Timesheet" Width="174" Click="btnTime_Click"/>
@@ -14,7 +14,7 @@
             <Button x:Name="btnEmployee" Content="Employee" Width="170"/>
         </DockPanel>
         <Grid Margin="0,35,152,0">
-            <DataGrid x:Name="listEmployee" HorizontalAlignment="Left" Height="369" Margin="10,10,0,0" VerticalAlignment="Top" Width="511" AutoGenerateColumns="False" CanUserAddRows="False" >
+            <DataGrid x:Name="listEmployee" HorizontalAlignment="Left" Height="417" Margin="10,10,0,0" VerticalAlignment="Top" Width="511" AutoGenerateColumns="False" CanUserAddRows="False" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="25" Header="ID" Binding="{Binding Id}"/>
                     <DataGridTextColumn Width="60" Header="NAME" Binding="{Binding Name}"/>
@@ -54,7 +54,27 @@
             <Label Content="Money per hours" HorizontalAlignment="Left" Margin="0,334,0,0" VerticalAlignment="Top" Width="109"/>
             <TextBox x:Name="txtMoney" HorizontalAlignment="Left" Height="23" Margin="0,359,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130"/>
 
-            <Button Margin="0,389,0,0" HorizontalAlignment="Left" Width="130" Height="20" VerticalAlignment="Top" Content="SAVE" Click="Button_Click"></Button>
+            <Label Content="Technology" HorizontalAlignment="Left" Margin="0,384,0,0" VerticalAlignment="Top" Width="109"/>
+            <ComboBox Name="cmbTech" HorizontalAlignment="Left" Height="23" Margin="0,410,0,0" VerticalAlignment="Top" Width="80">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox x:Name="chk" Checked="chk_Checked" Unchecked="chk_Unchecked" Content="{Binding Name}"></CheckBox>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            
+            <Label Content="Level" HorizontalAlignment="Left" Margin="95,384,0,0" VerticalAlignment="Top" Width="48"/>
+            <ComboBox Name="cmbLvl" HorizontalAlignment="Left" Height="23" Margin="95,410,0,0" VerticalAlignment="Top" Width="35">
+                <ComboBoxItem Content="5"></ComboBoxItem>
+                <ComboBoxItem Content="6"></ComboBoxItem>
+                <ComboBoxItem Content="7"></ComboBoxItem>
+                <ComboBoxItem Content="8"></ComboBoxItem>
+                <ComboBoxItem Content="9"></ComboBoxItem>
+                <ComboBoxItem Content="10"></ComboBoxItem>
+                <ComboBoxItem Content="10+"></ComboBoxItem>
+            </ComboBox>
+
+            <Button Margin="0,444,0,0" HorizontalAlignment="Left" Width="130" Height="20" VerticalAlignment="Top" Content="SAVE" Click="Button_Click"></Button>
         </Grid>
     </Grid>
 </Window>

@@ -18,129 +18,129 @@
             <Label Name="LbMounth" Content="MOUNTH: JUN" VerticalContentAlignment="Center"/>
         </DockPanel>
         <Grid>
-            <Label Content="Day: 06/10" Margin="28,78,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="28,94,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
-            <Label Name="LbDay1" BorderBrush="Black" BorderThickness="1" Margin="28,78,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD1" Content="Day: 1" Margin="28,78,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH1" Content="Hours: 0" Margin="28,94,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
+            <Label Name="LbDay_1" BorderBrush="Black" BorderThickness="1" Margin="28,78,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="105,78,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="105,94,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
-            <Label Name="LbDay2" BorderBrush="Black" BorderThickness="1" Margin="105,78,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD2" Content="Day: 2" Margin="105,78,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH2" Content="Hours: 0" Margin="105,94,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
+            <Label Name="LbDay_2" BorderBrush="Black" BorderThickness="1" Margin="105,78,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="182,78,0,0" FontSize="8" HorizontalAlignment="Left" Width="67" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="182,94,0,0" FontSize="10" HorizontalAlignment="Left" Width="67" Height="26" VerticalAlignment="Top"/>
-            <Label Name="LbDay3" BorderBrush="Black" BorderThickness="1" Margin="182,78,0,0" HorizontalAlignment="Left" Width="67" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD3" Content="Day: 3" Margin="182,78,0,0" FontSize="8" HorizontalAlignment="Left" Width="67" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH3" Content="Hours: 0" Margin="182,94,0,0" FontSize="10" HorizontalAlignment="Left" Width="67" Height="26" VerticalAlignment="Top"/>
+            <Label Name="LbDay_3" BorderBrush="Black" BorderThickness="1" Margin="182,78,0,0" HorizontalAlignment="Left" Width="67" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="260,78,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="260,94,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
-            <Label Name="LbDay4" BorderBrush="Black" BorderThickness="1" Margin="260,78,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD4" Content="Day: 4" Margin="260,78,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH4" Content="Hours: 0" Margin="260,94,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
+            <Label Name="LbDay_4" BorderBrush="Black" BorderThickness="1" Margin="260,78,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="337,78,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="337,94,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
-            <Label Name="LbDay5" BorderBrush="Black" BorderThickness="1" Margin="337,78,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD5" Content="Day: 5" Margin="337,78,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH5" Content="Hours: 0" Margin="337,94,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
+            <Label Name="LbDay_5" BorderBrush="Black" BorderThickness="1" Margin="337,78,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="414,78,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="414,94,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
-            <Label Name="LbDay6" BorderBrush="Black" BorderThickness="1" Margin="414,78,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD6" Content="Day: 6" Margin="414,78,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH6" Content="Hours: 0" Margin="414,94,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
+            <Label Name="LbDay_6" BorderBrush="Black" BorderThickness="1" Margin="414,78,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="491,78,0,0" FontSize="8" HorizontalAlignment="Left" Width="67" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="491,94,0,0" FontSize="10" HorizontalAlignment="Left" Width="67" Height="26" VerticalAlignment="Top"/>
-            <Label Name="LbDay7" BorderBrush="Black" BorderThickness="1" Margin="491,78,0,0" HorizontalAlignment="Left" Width="67" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD7" Content="Day: 7" Margin="491,78,0,0" FontSize="8" HorizontalAlignment="Left" Width="67" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH7" Content="Hours: 0" Margin="491,94,0,0" FontSize="10" HorizontalAlignment="Left" Width="67" Height="26" VerticalAlignment="Top"/>
+            <Label Name="LbDay_7" BorderBrush="Black" BorderThickness="1" Margin="491,78,0,0" HorizontalAlignment="Left" Width="67" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 1" Margin="28,141,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="28,157,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay8" BorderBrush="Black" BorderThickness="1" Margin="28,141,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD8" Content="Day: 8" Margin="28,141,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH8" Content="Hours: 0" Margin="28,157,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_8" BorderBrush="Black" BorderThickness="1" Margin="28,141,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="105,141,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="105,157,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay9" BorderBrush="Black" BorderThickness="1" Margin="105,141,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD9" Content="Day: 9" Margin="105,141,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH9" Content="Hours: 0" Margin="105,157,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay9" BorderBrush="Black" BorderThickness="1" Margin="105,141,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="182,141,0,0" FontSize="8" HorizontalAlignment="Left" Width="67" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="182,157,0,0" FontSize="10" HorizontalAlignment="Left" Width="67" Height="26" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay10" BorderBrush="Black" BorderThickness="1" Margin="182,141,0,0" HorizontalAlignment="Left" Width="67" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD10" Content="Day: 10" Margin="182,141,0,0" FontSize="8" HorizontalAlignment="Left" Width="67" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH10" Content="Hours: 0" Margin="182,157,0,0" FontSize="10" HorizontalAlignment="Left" Width="67" Height="26" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_10" BorderBrush="Black" BorderThickness="1" Margin="182,141,0,0" HorizontalAlignment="Left" Width="67" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="260,141,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="260,157,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay11" BorderBrush="Black" BorderThickness="1" Margin="260,141,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD11" Content="Day: 11" Margin="260,141,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH11" Content="Hours: 0" Margin="260,157,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_11" BorderBrush="Black" BorderThickness="1" Margin="260,141,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="337,141,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="337,157,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay12" BorderBrush="Black" BorderThickness="1" Margin="337,141,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD12" Content="Day: 12" Margin="337,141,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH12" Content="Hours: 0" Margin="337,157,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_12" BorderBrush="Black" BorderThickness="1" Margin="337,141,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="414,141,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="414,157,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay13" BorderBrush="Black" BorderThickness="1" Margin="414,141,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD13" Content="Day: 13" Margin="414,141,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH13" Content="Hours: 0" Margin="414,157,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_13" BorderBrush="Black" BorderThickness="1" Margin="414,141,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="491,141,0,0" FontSize="8" HorizontalAlignment="Left" Width="67" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="491,157,0,0" FontSize="10" HorizontalAlignment="Left" Width="67" Height="26" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay14" BorderBrush="Black" BorderThickness="1" Margin="491,141,0,0" HorizontalAlignment="Left" Width="67" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD14" Content="Day: 14" Margin="491,141,0,0" FontSize="8" HorizontalAlignment="Left" Width="67" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH14" Content="Hours: 0" Margin="491,157,0,0" FontSize="10" HorizontalAlignment="Left" Width="67" Height="26" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_14" BorderBrush="Black" BorderThickness="1" Margin="491,141,0,0" HorizontalAlignment="Left" Width="67" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 1" Margin="28,204,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="28,220,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay15" BorderBrush="Black" BorderThickness="1" Margin="28,204,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD15" Content="Day: 15" Margin="28,204,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH15" Content="Hours: 0" Margin="28,220,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_15" BorderBrush="Black" BorderThickness="1" Margin="28,204,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="105,204,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="105,220,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay16" BorderBrush="Black" BorderThickness="1" Margin="105,204,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD16" Content="Day: 16" Margin="105,204,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH16" Content="Hours: 0" Margin="105,220,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_16" BorderBrush="Black" BorderThickness="1" Margin="105,204,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="182,204,0,0" FontSize="8" HorizontalAlignment="Left" Width="67" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="182,220,0,0" FontSize="10" HorizontalAlignment="Left" Width="67" Height="26" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay17" BorderBrush="Black" BorderThickness="1" Margin="182,204,0,0" HorizontalAlignment="Left" Width="67" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD17" Content="Day: 17" Margin="182,204,0,0" FontSize="8" HorizontalAlignment="Left" Width="67" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH17" Content="Hours: 0" Margin="182,220,0,0" FontSize="10" HorizontalAlignment="Left" Width="67" Height="26" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_17" BorderBrush="Black" BorderThickness="1" Margin="182,204,0,0" HorizontalAlignment="Left" Width="67" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="260,204,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="260,220,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay18" BorderBrush="Black" BorderThickness="1" Margin="260,204,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD18" Content="Day: 18" Margin="260,204,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH18" Content="Hours: 0" Margin="260,220,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_18" BorderBrush="Black" BorderThickness="1" Margin="260,204,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="337,204,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="337,220,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay19" BorderBrush="Black" BorderThickness="1" Margin="337,204,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD19" Content="Day: 19" Margin="337,204,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH19" Content="Hours: 0" Margin="337,220,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_19" BorderBrush="Black" BorderThickness="1" Margin="337,204,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="414,204,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="414,220,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay20" BorderBrush="Black" BorderThickness="1" Margin="414,204,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD20" Content="Day: 20" Margin="414,204,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH20" Content="Hours: 0" Margin="414,220,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="26" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_20" BorderBrush="Black" BorderThickness="1" Margin="414,204,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="491,204,0,0" FontSize="8" HorizontalAlignment="Left" Width="67" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="491,220,0,0" FontSize="10" HorizontalAlignment="Left" Width="67" Height="26" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay21" BorderBrush="Black" BorderThickness="1" Margin="491,204,0,0" HorizontalAlignment="Left" Width="67" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD21" Content="Day: 21" Margin="491,204,0,0" FontSize="8" HorizontalAlignment="Left" Width="67" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH21" Content="Hours: 0" Margin="491,220,0,0" FontSize="10" HorizontalAlignment="Left" Width="67" Height="26" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_21" BorderBrush="Black" BorderThickness="1" Margin="491,204,0,0" HorizontalAlignment="Left" Width="67" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 1" Margin="28,267,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="28,282,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="27" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay22" BorderBrush="Black" BorderThickness="1" Margin="28,267,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD22" Content="Day: 22" Margin="28,267,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH22" Content="Hours: 0" Margin="28,282,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="27" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_22" BorderBrush="Black" BorderThickness="1" Margin="28,267,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="105,267,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="105,282,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="27" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay23" BorderBrush="Black" BorderThickness="1" Margin="105,267,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD23" Content="Day: 23" Margin="105,267,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH23" Content="Hours: 0" Margin="105,282,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="27" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_23" BorderBrush="Black" BorderThickness="1" Margin="105,267,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="182,267,0,0" FontSize="8" HorizontalAlignment="Left" Width="67" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="182,282,0,0" FontSize="10" HorizontalAlignment="Left" Width="67" Height="27" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay24" BorderBrush="Black" BorderThickness="1" Margin="182,267,0,0" HorizontalAlignment="Left" Width="67" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD24" Content="Day: 24" Margin="182,267,0,0" FontSize="8" HorizontalAlignment="Left" Width="67" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH24" Content="Hours: 0" Margin="182,282,0,0" FontSize="10" HorizontalAlignment="Left" Width="67" Height="27" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_24" BorderBrush="Black" BorderThickness="1" Margin="182,267,0,0" HorizontalAlignment="Left" Width="67" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="260,267,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="260,282,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="27" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay25" BorderBrush="Black" BorderThickness="1" Margin="260,267,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD25" Content="Day: 25" Margin="260,267,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH25" Content="Hours: 0" Margin="260,282,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="27" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_25" BorderBrush="Black" BorderThickness="1" Margin="260,267,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="337,267,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="337,282,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="27" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay26" BorderBrush="Black" BorderThickness="1" Margin="337,267,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD26" Content="Day: 26" Margin="337,267,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH26" Content="Hours: 0" Margin="337,282,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="27" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_26" BorderBrush="Black" BorderThickness="1" Margin="337,267,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="414,267,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="414,282,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="27" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay27" BorderBrush="Black" BorderThickness="1" Margin="414,267,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD27" Content="Day: 27" Margin="414,267,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH27" Content="Hours: 0" Margin="414,282,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="27" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_27" BorderBrush="Black" BorderThickness="1" Margin="414,267,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="491,267,0,0" FontSize="8" HorizontalAlignment="Left" Width="67" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="491,282,0,0" FontSize="10" HorizontalAlignment="Left" Width="67" Height="27" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay28" BorderBrush="Black" BorderThickness="1" Margin="491,267,0,0" HorizontalAlignment="Left" Width="67" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD28" Content="Day: 28" Margin="491,267,0,0" FontSize="8" HorizontalAlignment="Left" Width="67" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH28" Content="Hours: 0" Margin="491,282,0,0" FontSize="10" HorizontalAlignment="Left" Width="67" Height="27" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_28" BorderBrush="Black" BorderThickness="1" Margin="491,267,0,0" HorizontalAlignment="Left" Width="67" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 1" Margin="28,330,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="28,345,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="27" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay29" BorderBrush="Black" BorderThickness="1" Margin="28,330,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD29" Content="Day: 29" Margin="28,330,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH29" Content="Hours: 0" Margin="28,345,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="27" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_29" BorderBrush="Black" BorderThickness="1" Margin="28,330,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="105,330,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="105,345,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="27" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay30" BorderBrush="Black" BorderThickness="1" Margin="105,330,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD30" Content="Day: 30" Margin="105,330,0,0" FontSize="8" HorizontalAlignment="Left" Width="66" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH30" Content="Hours: 0" Margin="105,345,0,0" FontSize="10" HorizontalAlignment="Left" Width="66" Height="27" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_30" BorderBrush="Black" BorderThickness="1" Margin="105,330,0,0" HorizontalAlignment="Left" Width="66" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
 
-            <Label Content="Day: 2" Margin="182,330,0,0" FontSize="8" HorizontalAlignment="Left" Width="67" Height="21" VerticalAlignment="Top"/>
-            <Label Content="Hours: 7.5" Margin="182,345,0,0" FontSize="10" HorizontalAlignment="Left" Width="67" Height="27" VerticalAlignment="Top"/>
-            <Label x:Name="LbDay31" BorderBrush="Black" BorderThickness="1" Margin="182,330,0,0" HorizontalAlignment="Left" Width="67" Height="42" VerticalAlignment="Top"/>
+            <Label Name="lbD31" Content="Day: 31" Margin="182,330,0,0" FontSize="8" HorizontalAlignment="Left" Width="67" Height="21" VerticalAlignment="Top"/>
+            <Label Name="lbH31" Content="Hours: 0" Margin="182,345,0,0" FontSize="10" HorizontalAlignment="Left" Width="67" Height="27" VerticalAlignment="Top"/>
+            <Label x:Name="LbDay_31" BorderBrush="Black" BorderThickness="1" Margin="182,330,0,0" HorizontalAlignment="Left" Width="67" Height="42" VerticalAlignment="Top" MouseDown="AllDays_MouseDown"/>
         </Grid>
 
 

@@ -5,8 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TimeSheet"
         mc:Ignorable="d"
-        Title="ProjectWindow" Height="450" Width="800">
+        Title="ProjectWindow" Height="450" Width="700">
     <Grid>
-        
+        <DockPanel Height="30" Margin="0,0,0,0" VerticalAlignment="Top">
+            <Button x:Name="btnTime" Content="Timesheet" Width="174" Click="btnTime_Click"/>
+            <Button x:Name="btnClient" Content="Client" Width="173" Click="btnClient_Click"/>
+            <Button x:Name="btnProject" Content="Project" Width="175"/>
+            <Button x:Name="btnEmployee" Content="Employee" Width="170" Click="btnEmployee_Click"/>
+        </DockPanel>
+        <Grid Margin="0,35,152,0">
+            <DataGrid x:Name="listProjects" HorizontalAlignment="Left" Height="369" Margin="10,10,0,0" VerticalAlignment="Top" Width="511" AutoGenerateColumns="False" CanUserAddRows="False" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="25" Header="ID" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Width="60" Header="NAME" Binding="{Binding Name}"/>
+                    <DataGridTextColumn Width="100" Header="CLIEND NAME" Binding="{Binding Clinet.Name}"/>
+                    <DataGridTemplateColumn Header="PROJECTS" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <ComboBox ItemsSource="{Binding LeadershipName}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Width="50" Header="ACTIVE" Binding="{Binding IsActive}"/>
+                    <DataGridTextColumn Width="*" Header="TIME SPENT" Binding="{Binding TimeSepnt}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <Grid Margin="529,0,0,0" x:Name="AddOption" Visibility="Visible">
+            <Label Content="Name" HorizontalAlignment="Left" Margin="0,34,0,0" VerticalAlignment="Top" Width="45"/>
+            <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" Margin="0,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130"/>
+
+            <Label Content="CLIEND " HorizontalAlignment="Left" Margin="0,84,0,0" VerticalAlignment="Top" Width="40"/>
+            <ComboBox Name="cmbClient" HorizontalAlignment="Left" Height="23" Margin="0,109,0,0" VerticalAlignment="Top" Width="130"/>
+            
+            <Label Content="LEADER" HorizontalAlignment="Left" Margin="0,134,0,0" VerticalAlignment="Top" Width="57"/>
+            <ComboBox Name="cmbLiders" HorizontalAlignment="Left" Height="23" Margin="0,159,0,0" VerticalAlignment="Top" Width="130">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox x:Name="chk" Checked="chkLiders_Checked" Unchecked="chkLiders_Unchecked" Content="{Binding Name}" CommandParameter="{Binding Id}"></CheckBox>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <Label Content="DESCRIPTION" HorizontalAlignment="Left" Margin="0,184,0,0" VerticalAlignment="Top" Width="130"/>
+            <TextBlock x:Name="txtDec" HorizontalAlignment="Left" Height="81" Margin="0,209,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130" Background="Gray"/>
+
+            <Button Margin="0,295,0,0" HorizontalAlignment="Left" Width="130" Height="20" VerticalAlignment="Top" Content="SAVE" Click="Button_Click"></Button>
+        </Grid>
     </Grid>
 </Window>

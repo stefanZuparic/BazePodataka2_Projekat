@@ -9,18 +9,24 @@
     <Grid>
         <DockPanel Height="30" Margin="0,0,0,0" VerticalAlignment="Top">
             <Button x:Name="btnTime" Content="Timesheet" Width="174" Click="btnTime_Click"/>
-            <Button x:Name="btnClient" Content="Client" Width="173" Click="btnClient_Click"/>
+            <Button x:Name="btnClient" Content="Client" Width="173"/>
             <Button x:Name="btnProject" Content="Project" Width="175" Click="btnProject_Click"/>
-            <Button x:Name="btnEmployee" Content="Employee" Width="170"/>
+            <Button x:Name="btnEmployee" Content="Employee" Width="170" Click="btnEmployee_Click"/>
         </DockPanel>
         <Grid Margin="0,35,152,0">
-            <DataGrid x:Name="listEmployee" HorizontalAlignment="Left" Height="369" Margin="10,10,0,0" VerticalAlignment="Top" Width="511" AutoGenerateColumns="False" CanUserAddRows="False">
+            <DataGrid x:Name="listClients" HorizontalAlignment="Left" Height="369" Margin="10,10,0,0" VerticalAlignment="Top" Width="511" AutoGenerateColumns="False" CanUserAddRows="False" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="25" Header="ID" Binding="{Binding Id}"/>
                     <DataGridTextColumn Width="60" Header="NAME" Binding="{Binding Name}"/>
                     <DataGridTextColumn Width="100" Header="ADDRESS" Binding="{Binding Address}"/>
-                    <DataGridCheckBoxColumn Width="50" Header="ACTIVE" Binding="{Binding IsActive}"/>
-                    <DataGridComboBoxColumn Width="*" Header="PROJECT" ItemsSource="{Binding Project}"/>
+                    <DataGridTextColumn Width="50" Header="ACTIVE" Binding="{Binding IsActive}"/>
+                    <DataGridTemplateColumn Header="PROJECTS" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <ComboBox ItemsSource="{Binding Project}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
