@@ -93,6 +93,14 @@ namespace TimeSheet
                     Project = new List<Project>()
                 };
                 service.Create(clientDTO);
+
+                clients = service.GetAll();
+                GetProjectForAllClients();
+
+                clientsGread = MapClientDTOOnClientDataGreadDTO(clients);
+
+                listClients.ItemsSource = clientsGread;
+                listClients.Items.Refresh();
             }
         }
 

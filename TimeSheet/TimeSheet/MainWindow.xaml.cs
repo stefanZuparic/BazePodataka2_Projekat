@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TimeSheet.Maper;
+using TimeSheet.Repository;
+using TimeSheet.Repository.DTOs;
+using TimeSheet.Service;
 
 namespace TimeSheet
 {
@@ -20,37 +25,34 @@ namespace TimeSheet
     /// </summary>
     public partial class MainWindow : Window
     {
+        TimeSheetEntryDbContext context;
+        IMapper mapper;
+
+        public static EmployeeDTO logedEmploye;
+        EmployeeService service;
         public MainWindow()
         {
+            var mapperconfig = new MapperConfiguration(mc => mc.AddProfile(new MappingProfile()));
+            mapper = mapperconfig.CreateMapper();
+
+            context = new TimeSheetEntryDbContext();
+
+            service = new EmployeeService(mapper, context);
+
             InitializeComponent();
         }
 
-        private void btnEmployee_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            EmployeeWindow w = new EmployeeWindow();
-            w.Show();
-            this.Close();
-        }
+            logedEmploye = service.GetByMail(txtEmail.Text);
 
-        private void btnTime_Click(object sender, RoutedEventArgs e)
-        {
-            TimeWindow w = new TimeWindow();
-            w.Show();
-            this.Close();
-        }
+            if (logedEmploye.Password == txtPassword.Password)
+            {
+                TimeWindow w = new TimeWindow();
+                w.Show();
+                this.Close();
+            }
 
-        private void btnClient_Click(object sender, RoutedEventArgs e)
-        {
-            ClienWindow w = new ClienWindow();
-            w.Show();
-            this.Close();
-        }
-
-        private void btnProject_Click(object sender, RoutedEventArgs e)
-        {
-            ProjectWindow w = new ProjectWindow();
-            w.Show();
-            this.Close();
         }
     }
 }

@@ -11,7 +11,7 @@ namespace TimeSheet.Interfaces
     {
         List<TimeSheetEntryDTO> GetAll();
        
-        TimeSheetEntryDTO GetForDate(string date);
+        List<TimeSheetEntryDTO> GetForDate(string date);
 
         void Create(TimeSheetEntryDTO dto);
 

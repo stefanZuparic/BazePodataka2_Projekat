@@ -14,7 +14,7 @@
             <Button x:Name="btnEmployee" Content="Employee" Width="170" Click="btnEmployee_Click"/>
         </DockPanel>
         <Grid Margin="0,35,152,0">
-            <DataGrid x:Name="listClients" HorizontalAlignment="Left" Height="369" Margin="10,10,0,0" VerticalAlignment="Top" Width="511" AutoGenerateColumns="False" CanUserAddRows="False" >
+            <DataGrid x:Name="listClients" HorizontalAlignment="Left" Height="369" Margin="10,10,0,0" VerticalAlignment="Top" Width="511" AutoGenerateColumns="False" CanUserAddRows="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="25" Header="ID" Binding="{Binding Id}"/>
                     <DataGridTextColumn Width="60" Header="NAME" Binding="{Binding Name}"/>

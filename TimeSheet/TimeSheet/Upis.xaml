@@ -5,8 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TimeSheet"
         mc:Ignorable="d"
-        Title="Upis" Height="450" Width="800">
+        Title="Upis" Height="450" Width="800"
+        Closing="Window_Closing">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="59*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="PROJECT" HorizontalAlignment="Left" Margin="40,14,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cmbProject" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Width="120" />
+
+        <Label Content="OFFICE" HorizontalAlignment="Left" Margin="170,14,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cmbBranchOfice" HorizontalAlignment="Left" Margin="170,40,0,0" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="TYPE OF WORK" HorizontalAlignment="Left" Margin="300,14,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cmbOwertime" HorizontalAlignment="Left" Margin="300,40,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="CESUAL"></ComboBoxItem>
+            <ComboBoxItem Content="OWERTIME"></ComboBoxItem>
+            <ComboBoxItem Content="FREE"></ComboBoxItem>
+        </ComboBox>
+
+        <TextBox x:Name="txtH" HorizontalAlignment="Left" Height="23" Margin="425,40,0,0" TextWrapping="Wrap" Text="Hours" VerticalAlignment="Top" Width="50" TextAlignment="Center"/>
+
+        <TextBox x:Name="txtD" HorizontalAlignment="Left" Height="23" Margin="480,40,0,0" TextWrapping="Wrap" Text="DESCRIPTION" VerticalAlignment="Top" Width="140"/>
+
+        <Button Content="SAVE" HorizontalAlignment="Left" Margin="644,40,0,0" VerticalAlignment="Top" Width="75" Height="24" Click="Button_Click" Grid.ColumnSpan="2"/>
+
+        <DataGrid x:Name="grid" HorizontalAlignment="Left" Height="300" Margin="40,86,0,0" VerticalAlignment="Top" Width="742" AutoGenerateColumns="False" CanUserAddRows="False" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*" Header="ID" Binding="{Binding Id}"/>
+                <DataGridTextColumn Width="*" Header="EMPLOYEE" Binding="{Binding Employee.Name}"/>
+                <DataGridTextColumn Width="*" Header="OFFICE" Binding="{Binding BranchOffice.Name}"/>
+                <DataGridTextColumn Width="*" Header="PROJECT" Binding="{Binding Project.Name}"/>
+                <DataGridTextColumn Width="*" Header="HOURS" Binding="{Binding Hours}"/>
+                <DataGridTextColumn Width="*" Header="WORETIME TYPE" Binding="{Binding OwertimeType}"/>
+                <DataGridTextColumn Width="*" Header="DESCRIPTION" Binding="{Binding Description}"/>
+                <DataGridTemplateColumn Width="60">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="Remove" Content="REMOVE" Click="Remove_Click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>
     </Grid>
 </Window>

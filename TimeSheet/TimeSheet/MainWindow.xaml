@@ -7,11 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="600">
     <Grid>
-        <DockPanel Height="30" Margin="0,0,0,0" VerticalAlignment="Top">
-            <Button x:Name="btnTime" Content="Timesheet" Width="150" Click="btnTime_Click"/>
-            <Button x:Name="btnClient" Content="Client" Width="150" Click="btnClient_Click"/>
-            <Button x:Name="btnProject" Content="Project" Width="150" Click="btnProject_Click"/>
-            <Button x:Name="btnEmployee" Content="Employee" Width="150" Click="btnEmployee_Click"/>
-        </DockPanel>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="80" Margin="160,90,0,0" TextWrapping="Wrap" Text="ENTER USERNAME" VerticalAlignment="Top" Width="300" TextAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Height="80" Margin="160,190,0,0" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center" FontSize="20"/>
+        <Button Content="Login" HorizontalAlignment="Left" Margin="225,310,0,0" VerticalAlignment="Top" Width="150" Height="50" Click="Button_Click"/>
+
     </Grid>
 </Window>

@@ -36,7 +36,11 @@ namespace TimeSheet.Service
             _context.SaveChanges();
         }
 
-        
+        public List<BranchOfficeDTO> GetAllOffice() {
+            List<BranchOffice> ret = _context.BranchOffice.Include("TimeSheetEntry").ToList();
+
+            return _mapper.Map<List<BranchOfficeDTO>>(ret);
+        }
 
         public List<Technology> GetAll()
         {

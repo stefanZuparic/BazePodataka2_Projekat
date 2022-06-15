@@ -34,6 +34,7 @@ namespace TimeSheet
         ClientService clientService;
         EmployeeService employeeService;
         TechnologyService technologyService;
+        TimeSheetEntryService tS;
 
         List<ProjectDTO> projects;
         List<ClientDTO> clients;
@@ -52,12 +53,18 @@ namespace TimeSheet
             clientService = new ClientService(mapper, context);
             employeeService = new EmployeeService(mapper, context);
             technologyService = new TechnologyService(mapper,context);
+            tS = new TimeSheetEntryService(mapper,context);
 
             projects = service.GetAll();
             employeis = employeeService.GetAllEmployee();
             leaders = new List<EmployeeDTO>();
 
             InitializeComponent();
+
+            if (MainWindow.logedEmploye.Role != "Admin")
+            {
+                listProjects.Columns[6].Visibility = Visibility.Hidden;
+            }
 
             listProjects.ItemsSource =MapForGrid();
             cmbLiders.ItemsSource = employeeService.GetAll();
@@ -72,12 +79,12 @@ namespace TimeSheet
                 ProjectGreadDTO gdto = new ProjectGreadDTO() {
                     Name = dto.Name,
                     Description = dto.Description,
-                    IsActive = dto.IsActive,
+                    IsActive =  dto.IsActive,
                     Clinet = dto.Clinet,
                     ClinetId = dto.ClinetId,
                     Id = dto.Id,
                     LeadershipName = new List<string>(),
-                    UkupnoSatiNaProjektu = IzracunajUkuonoSati()
+                    UkupnoSatiNaProjektu = IzracunajUkuonoSati(dto.Id)
                 };
 
                 foreach (Leadership ldto in dto.Leadership) {
@@ -89,8 +96,26 @@ namespace TimeSheet
             return ret;
         }
 
-        public float IzracunajUkuonoSati() {
-            return 0;
+        public float IzracunajUkuonoSati(int id) {
+            List<TimeSheetEntryDTO> pom = tS.GetAllEntryForProjectId(id);
+            float ret = 0;
+
+            foreach (TimeSheetEntryDTO dto in pom) {
+                if (dto.OwertimeType == "CESUAL")
+                {
+                    ret += (float)(dto.Hours);
+                }
+                else if (dto.OwertimeType == "OWERTIME")
+                {
+                    ret += (float)(dto.Hours);
+                }
+                else 
+                {
+                    ret += (float)(dto.Hours);
+                }
+            }
+
+            return ret;
         }
 
         private IEnumerable GetAllClientName()
@@ -116,6 +141,7 @@ namespace TimeSheet
                     Clinet = clientService.GetByIdClient(clients[cmbClient.SelectedIndex].Id),
                     ClinetId = clients[cmbClient.SelectedIndex].Id,
                     TimeSheetEntry = new List<TimeSheetEntry>(),
+                    IsActive = "YES"
                 };
                 Project project = service.Create(projectDTO);
 
@@ -127,6 +153,10 @@ namespace TimeSheet
                     };
                     technologyService.CreateLeaders(l);
                 }
+
+                projects = service.GetAll();
+                listProjects.ItemsSource = MapForGrid();
+                listProjects.Items.Refresh();
             }
         }
 
@@ -164,6 +194,23 @@ namespace TimeSheet
             CheckBox cb = (CheckBox)sender;
             EmployeeDTO pom = (EmployeeDTO)cb.DataContext;
             leaders.Remove(pom);
+        }
+
+        private void change_Click(object sender, RoutedEventArgs e)
+        {
+            ProjectDTO dto = projects[listProjects.SelectedIndex];
+
+            if (dto.IsActive == "YES")
+            {
+                service.UpdateActivity(false, dto.Id);
+            }
+            else 
+            {
+                service.UpdateActivity(true, dto.Id);
+            }
+            projects = service.GetAll();
+            listProjects.ItemsSource = MapForGrid();
+            listProjects.Items.Refresh();
         }
     }
 }

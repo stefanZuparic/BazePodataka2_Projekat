@@ -53,7 +53,12 @@ namespace TimeSheet
 
             
             InitializeComponent();
-            
+
+            if (MainWindow.logedEmploye.Role != "Admin")
+            {
+                AddOption.Visibility = Visibility.Hidden;
+                listEmployee.Columns[6].Visibility = Visibility.Hidden;
+            }
             employeesView = MapEmployeeDTOonEmployeeDataGreadDTO(employees);
             this.listEmployee.ItemsSource = employeesView;
             cmbTech.ItemsSource = technologyService.GetAll();
@@ -107,7 +112,11 @@ namespace TimeSheet
                         };
                         technologyService.Create(technologyDTO);
                     }
-                    
+
+                    employees = service.GetAll();
+                    employeesView = MapEmployeeDTOonEmployeeDataGreadDTO(employees);
+                    this.listEmployee.ItemsSource = employeesView;
+                    listEmployee.Items.Refresh();
                 }
             }
         }
@@ -117,6 +126,11 @@ namespace TimeSheet
             if (listEmployee.SelectedIndex >= 0) {
                 EmployeeDataGreadDTO remove = (EmployeeDataGreadDTO)listEmployee.SelectedItem;
                 service.DeleteByMale(remove.Email);
+
+                employees = service.GetAll();
+                employeesView = MapEmployeeDTOonEmployeeDataGreadDTO(employees);
+                this.listEmployee.ItemsSource = employeesView;
+                listEmployee.Items.Refresh();
             }
         }
 

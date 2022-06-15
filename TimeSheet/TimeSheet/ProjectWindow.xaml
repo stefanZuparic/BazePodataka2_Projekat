@@ -27,7 +27,14 @@
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
                     <DataGridTextColumn Width="50" Header="ACTIVE" Binding="{Binding IsActive}"/>
-                    <DataGridTextColumn Width="*" Header="TIME SPENT" Binding="{Binding TimeSepnt}"/>
+                    <DataGridTextColumn Width="40" Header="TIME SPENT" Binding="{Binding UkupnoSatiNaProjektu}"/>
+                    <DataGridTemplateColumn Width="100">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="change" Content="CHAGE ACTIVITY" Click="change_Click"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
@@ -48,7 +55,7 @@
             </ComboBox>
 
             <Label Content="DESCRIPTION" HorizontalAlignment="Left" Margin="0,184,0,0" VerticalAlignment="Top" Width="130"/>
-            <TextBlock x:Name="txtDec" HorizontalAlignment="Left" Height="81" Margin="0,209,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130" Background="Gray"/>
+            <TextBox x:Name="txtDec" HorizontalAlignment="Left" Height="81" Margin="0,209,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130" Background="Gray"/>
 
             <Button Margin="0,295,0,0" HorizontalAlignment="Left" Width="130" Height="20" VerticalAlignment="Top" Content="SAVE" Click="Button_Click"></Button>
         </Grid>
